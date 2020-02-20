@@ -16,7 +16,7 @@
 
 .text 0x3000
 
-main:
+loop:
 				# Print the prompt for width
   addi 	$v0, $0, 4  			# system call 4 is for printing a string
   la 	$a0, widthPrompt 		# address of widthPrompt is in $a0
