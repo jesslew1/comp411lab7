@@ -136,20 +136,20 @@ rgb_to_gray:            # procedure to calculate gray = (red + green + blue) / 3
                         # red is in $a0, green is in $a1, blue is in $a2
                         # gray should be computed in $v0 (return value)
                         # there is no need to use a stack
-#	add 	$v0, $a0, $a1
-#	add	$v0, $v0, $a2
+	add 	$v0, $a0, $a1
+	add	$v0, $v0, $a2
 	
-#	addi	$a3, $0, 3
+	addi	$a3, $0, 3
 #------- INSERT YOUR CODE HERE -------
 #
 # Simply add instructions here to calculate
 #   gray = (red + green + blue) / 3
 #
- $v0 = ($a0 + $a1 + $a2) / 3
+# $v0 = ($a0 + $a1 + $a2) / 3
 #
 #  That's it!
-# div	$v0, $a3
-#	mflo	$v0
+ div	$v0, $a3
+	mflo	$v0
 #------------ END CODE ---------------
 
   jr $ra                # return to main
