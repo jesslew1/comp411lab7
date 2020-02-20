@@ -26,7 +26,7 @@ loop:
   addi	$v0, $0, 5			# system call 5 is for reading an integer
   syscall 				# integer value read is in $v0
   add	$8, $0, $v0			# copy the width into $8
-
+  beq  $8, $0, exit
 				# Print the prompt for height
   addi 	$v0, $0, 4  			# system call 4 is for printing a string
   la 	$a0, heightPrompt 		# address of heightPrompt is in $a0
